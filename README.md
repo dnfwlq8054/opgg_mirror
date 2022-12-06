@@ -1,1 +1,1 @@
-# opgg_mirror
+# LoLDog
