@@ -79,5 +79,5 @@ jobs:
         node-version: 16
         architecture: x86 # optional
         cache: 'npm'
-      run: npm ci
-      run: npm test
+    - run: npm ci
+    - run: npm test
