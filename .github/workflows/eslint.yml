@@ -7,27 +7,17 @@ on:
       - master
 
 jobs:
-  eslint:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ 16 ]
+    name: Node ${{ matrix.node }} sample
     steps:
-      - name: Install dependencies
-        run: |
-          if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
-
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: 16
-      - uses: sibiraj-s/action-eslint@v2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
-          eslint-args: '--ignore-path=.gitignore --quiet'
-          extensions: 'js,jsx,ts,tsx'
-          annotations: true
-          
+          node-version: ${{ matrix.node }}
+      - run: npm ci
+      - run: npm test
