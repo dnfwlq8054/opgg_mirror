@@ -71,7 +71,7 @@ jobs:
       uses: actions/setup-node@v3.5.1
       with:
         node-version: 16
-        architecture: x86 # optional
+        architecture: x64 # optional
         cache: 'npm'
     - run: npm ci
     - run: npm test
