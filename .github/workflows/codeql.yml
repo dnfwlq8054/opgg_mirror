@@ -32,7 +32,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript', 'java' ]
+        language: [ 'javascript' ]
         # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
@@ -76,26 +76,8 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v3.5.1
       with:
-        # Set always-auth in npmrc.
-        always-auth: false # optional, default is false
-        # Version Spec of the version to use. Examples: 12.x, 10.15.1, >=10.15.0.
-        node-version: 18.12.1# optional
-        # File containing the version Spec of the version to use.  Examples: .nvmrc, .node-version, .tool-versions.
-        node-version-file: node-version # optional
-        # Target architecture for Node to use. Examples: x86, x64. Will use system architecture by default.
-        architecture: x86 # optional
-        # Set this option if you want the action to check for the latest available version that satisfies the version spec.
-        check-latest: # optional
-        # Optional registry to set up for auth. Will set the registry in a project level .npmrc and .yarnrc file, and set up auth to read in from env.NODE_AUTH_TOKEN.
-        registry-url: # optional
-        # Optional scope for authenticating against scoped registries. Will fall back to the repository owner when using the GitHub Packages registry (https://npm.pkg.github.com/).
-        scope: # optional
-        # Used to pull node distributions from node-versions.  Since there's a default, this is typically not supplied by the user.
-        token: # optional, default is ${{ github.token }}
-        # Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm.
-        cache: # optional
-        # Used to specify the path to a dependency file: package-lock.json, yarn.lock, etc. Supports wildcards or a list of file names for caching multiple dependencies.
-        cache-dependency-path: # optional
+        cache: 'npm'
+        node-version: 16
         
     - name: Setup Java JDK
       uses: actions/setup-java@v3.8.0
