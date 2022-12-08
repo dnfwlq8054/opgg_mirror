@@ -3,9 +3,6 @@
   "version": "9.2.0",
   "description": "npm package",
   "main": "index.js",
-  "scripts": {
-    "test": echo "TEST"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dnfwlq8054/opgg_mirror.git"
