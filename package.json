@@ -4,7 +4,7 @@
   "description": "npm package",
   "main": "index.js",
   "scripts": {
-    "test": "TEST"
+    "test": echo "TEST"
   },
   "repository": {
     "type": "git",
