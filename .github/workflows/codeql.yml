@@ -67,6 +67,7 @@ jobs:
       with:
         category: "/language:${{matrix.language}}"
 
+  steps:
     - name: Setup Node.js environment
       uses: actions/setup-node@v3.5.1
       with:
@@ -75,3 +76,13 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm test
+    
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Setup node
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: ${{ matrix.node }}
+#       - run: npm install
+#       - run: npm ci
+#       - run: npm test    
