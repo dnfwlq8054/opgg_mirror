@@ -1,1 +1,3 @@
 terraform/.terraform/*
+terraform/tfplan
+terraform/.terraform.lock.hcl
