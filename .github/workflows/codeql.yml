@@ -19,6 +19,8 @@ on:
     # The branches below must be a subset of the branches above
     branches:
       - "*"
+    paths:
+      - "!**/*.md"
   schedule:
     - cron: '24 22 * * 6'
 
