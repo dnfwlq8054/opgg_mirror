@@ -1,0 +1,19 @@
+{
+  "name": "opgg_mirror",
+  "version": "9.2.0",
+  "description": "npm package",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnfwlq8054/opgg_mirror.git"
+  },
+  "keywords": [
+    "opgg"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnfwlq8054/opgg_mirror/issues"
+  },
+  "homepage": "https://github.com/dnfwlq8054/opgg_mirror#readme"
+}
