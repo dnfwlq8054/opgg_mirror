@@ -48,9 +48,13 @@ on:
   push:
     branches:
       - "*"
+    paths:
+      - "**/terraform/*"
   pull_request:
     branches:
         - "*"
+    paths:
+      - "**/terraform/*"
 
 permissions:
   contents: read
