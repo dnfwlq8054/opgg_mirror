@@ -49,12 +49,12 @@ on:
     branches:
       - "*"
     paths:
-      - "**/terraform/*"
+      - "terraform/*"
   pull_request:
     branches:
         - "*"
     paths:
-      - "**/terraform/*"
+      - "terraform/*"
 
 permissions:
   contents: read
