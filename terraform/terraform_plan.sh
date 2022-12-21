@@ -10,7 +10,7 @@ select_workspace() {
 }
 
 terraform_plan() {
-  terraform plan -out=tfplan -lock=false
+  terraform plan -out=tfplan
   terraform fmt -check
 }
 
